@@ -1,0 +1,3 @@
+models:
+  - name: walmart_date_dim
+    description: "Dimension table for Store Dates"

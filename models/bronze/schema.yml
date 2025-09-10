@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: source_data
+    database: WALMART_SOURCE_DB
+    schema: BRONZE
+    tables:
+      - name: department
+      - name: stores
+      - name: fact
