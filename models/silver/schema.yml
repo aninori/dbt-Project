@@ -14,4 +14,6 @@ models:
     description: "Dimension table with date info and isHoliday flag"
   - name: walmart_store_dim
     description: "SCD1 dimension table containing store and department details"
+  - name: walmart_fact_table_source
+    description: "fact table for view"
 
