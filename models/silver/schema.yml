@@ -1,3 +1,14 @@
+version: 2
+
+sources:
+  - name: source_data
+    database: WALMART_SOURCE_DB
+    schema: BRONZE
+    tables:
+      - name: DEPARTMENT
+      - name: STORES
+      - name: FACT
+
 models:
   - name: walmart_date_dim
-    description: "Dimension table for Store Dates"
+    description: "Dimension table with date info and isHoliday flag"
