@@ -1,11 +1,9 @@
-{{ 
-  config(
+{{ config(
     materialized='incremental',
     incremental_strategy='delete+insert',
-    unique_key='Date',
-    pre_hook=copy_department_to_snowflake('DEPARTMENT')
-  ) 
-}}
+    unique_key='Store_Date',
+    pre_hook=copy_department_to_snowflake('department')
+) }}
 
 WITH source AS (
     SELECT DISTINCT
@@ -23,6 +21,10 @@ SELECT
     Insert_date,
     Update_date
 FROM source
+
+{% if is_incremental() %}
+-- dbt handles the delete+insert using unique_key = 'Store_Date'
+{% endif %}
 
 
 
