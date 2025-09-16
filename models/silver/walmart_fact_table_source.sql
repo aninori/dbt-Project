@@ -1,6 +1,7 @@
 {{ config(
     materialized='table',
-    schema='silver'
+    schema='silver',
+    pre_hook=["{{ copy_department_to_snowflake('DEPARTMENT') }}", "{{ copy_stores_to_snowflake('STORES') }}","{{copy_fact_to_snowflake('FACT')}}"]
 ) }}
 
 WITH base AS (
