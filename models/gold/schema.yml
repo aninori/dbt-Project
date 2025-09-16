@@ -1,3 +1,0 @@
-models:
-  - name: walmart_fact_view
-    description: "Gold View Table"

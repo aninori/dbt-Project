@@ -1,5 +1,0 @@
-version: 2
-
-snapshots:
-  - name: walmart_fact_snapshot
-    description: "SCD2 Snapshot of Walmart fact table"
