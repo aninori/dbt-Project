@@ -1,9 +1,10 @@
 {{ config(
     materialized='table',
-    schema='silver'
+    schema='silver',
+    pre_hook=["{{ copy_department_to_snowflake('DEPARTMENT') }}", "{{ copy_stores_to_snowflake('STORES') }}","{{copy_fact_to_snowflake('FACT')}}"]
 ) }}
 
-WITH fct AS (
+WITH base AS (
     SELECT
         s.Store_id,
         s.Dept_id,
@@ -24,7 +25,11 @@ WITH fct AS (
     LEFT JOIN {{ source('source_data', 'FACT') }} f
         ON s.Store_id = f.STORE
     LEFT JOIN {{ source('source_data', 'DEPARTMENT') }} dpt
-        ON s.Store_id = dpt.STORE AND s.Dept_id = dpt.DEPT AND dpt.DATE = f.DATE
+        ON s.Store_id = dpt.STORE
+        AND s.Dept_id = dpt.DEPT
+        AND f.DATE = dpt.DATE
 )
 
-SELECT * FROM fct
+SELECT * FROM base
+
+
