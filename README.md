@@ -47,4 +47,7 @@ Built a full-stack modern data pipeline to transform Walmart sales and inventory
 └── README.md
 ```
 
+<img width="1024" height="1536" alt="ChatGPT Image Sep 21, 2025, 10_51_42 PM" src="https://github.com/user-attachments/assets/45468867-8f29-4cc7-83b3-85cfef28f89a" />
+
+
 
