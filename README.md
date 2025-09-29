@@ -46,8 +46,8 @@ Built a full-stack modern data pipeline to transform Walmart sales and inventory
 ├── dbt_project.yml
 └── README.md
 ```
+<img width="921" height="222" alt="walmart_dbt_architecture (1) drawio" src="https://github.com/user-attachments/assets/e7784d5a-3f8b-4ccf-ae1e-bfad1f2cfedb" />
 
-<img width="1024" height="1536" alt="ChatGPT Image Sep 21, 2025, 10_51_42 PM" src="https://github.com/user-attachments/assets/45468867-8f29-4cc7-83b3-85cfef28f89a" />
 
 
 
